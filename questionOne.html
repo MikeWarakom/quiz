@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2 id="question">Po jaki rzadki drink jeździliście z Mateuszem i Michałem po Gorzowie całą noc na hulajnogach?</h2>
+        <input type="text" id="answerInput" placeholder="Enter your answer">
+        <button onclick="checkAnswer()">Sprawdź odpowiedź</button>
+        <p id="result"></p>
+    </div>
+<script>
+    function checkAnswer() {
+        const userAnswer = document.getElementById("answerInput").value.trim().toLowerCase();
+        const correctAnswers = ["whiskey sour", "whisky sour"];
+        const result = document.getElementById("result");
+
+        if (correctAnswers.includes(userAnswer)) {
+            result.textContent = "W Rokietnicy przy dworcu przygodę zaczynasz, gdzie rowerów parking w ciszy się wspina. Przy ścianie rdzawej, co stary budynek osłania, tam, gdzie zachód słońca rzuca swe witania — od tej ściany zrób dziesięć kroków w dal, średnich, nie małych — to nie byle żal. Tam w cieniu ukryta leży wskazówka, co dalej poprowadzi cię... jak morska drukówka!";
+            result.style.color = "#008080";
+        } else {
+            result.textContent = "Spróbuj jeszcze raz!";
+            result.style.color = "red";
+        }
+    }
+</script>

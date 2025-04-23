@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2 id="question">Pewnego razu po pijackiej imprezie dostałeś w zęby od pewnej infrastruktury, kto był wtedy z Tobą?</h2>
+        <input type="text" id="answerInput" placeholder="Enter your answer">
+        <button onclick="checkAnswer()">Sprawdź odpowiedź</button>
+        <p id="result"></p>
+    </div>
+<script>
+    function checkAnswer() {
+        const userAnswer = document.getElementById("answerInput").value.trim().toLowerCase();
+        const correctAnswers = ["wojtek","wojciech","wojas"];
+        const result = document.getElementById("result");
+
+        if (correctAnswers.includes(userAnswer)) {
+            result.textContent = "Gdy znak nakazu w lewo i zakazu wjazdu ujrzysz, nie zwlekaj, ruszaj — niech stopy twe się nie spóźnią. Idź śmiało przed siebie, aż Biedronka się wyłoni, a za jej parkingiem — wśród drzew, co cień goni — czeka zejście w dół, jak z mapy starej księgi, tam nowe wyzwanie drzemie... w głębi leśnej przysięgi!";
+            result.style.color = "#008080";
+        } else {
+            result.textContent = "Spróbuj jeszcze raz!";
+            result.style.color = "red";
+        }
+    }
+</script>

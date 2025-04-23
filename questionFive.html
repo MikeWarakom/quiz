@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2 id="question">Cofnijmy się do 2015 roku, jesteśmy w twoim studenckim mieszkaniu w Szczecinie. O co Piotr pytał przechodniów?</h2>
+        <input type="text" id="answerInput" placeholder="Enter your answer">
+        <button onclick="checkAnswer()">Sprawdź odpowiedź</button>
+        <p id="result"></p>
+    </div>
+<script>
+    function checkAnswer() {
+        const userAnswer = document.getElementById("answerInput").value.trim().toLowerCase();
+        const correctAnswers = ["gdzie państwo idziecie?", "gdzie idziecie?", "gdzie idziecie państwo?", "gdzie państwo idą?", "gdzie idą państwo?", "gdzie idą?","gdzie panstwo idziecie", "gdzie idziecie panstwo?", "gdzie panstwo idą?", "gdzie idą panstwo?", "gdzie idą?"];
+        const result = document.getElementById("result");
+
+        if (correctAnswers.includes(userAnswer)) {
+            result.textContent = "Gdy z pojazdu zejdziesz, nie zwlekaj z marszem, na południe ruszaj – niech krok twój będzie twardszy. Dwieście metrów, nie więcej ni mniej, tam przystanek czeka — więc śmiało, leć! Czeka tam gra, lecz nie taka w karcie, piracka zabawa… lecz niech nie wie, co w starcie!";
+            result.style.color = "#008080";
+        } else {
+            result.textContent = "Spróbuj jeszcze raz!";
+            result.style.color = "red";
+        }
+    }
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2 id="question">W 2024 roku byłeś dla Cezarego dealerem, a może nawet kurierem! Co mu podrzuciłeś na parkingu?</h2>
+        <input type="text" id="answerInput" placeholder="Enter your answer">
+        <button onclick="checkAnswer()">Sprawdź odpowiedź</button>
+        <p id="result"></p>
+    </div>
+<script>
+    function checkAnswer() {
+        const userAnswer = document.getElementById("answerInput").value.trim().toLowerCase();
+        const correctAnswers = ["kask narciarski", "kask"];
+        const result = document.getElementById("result");
+
+        if (correctAnswers.includes(userAnswer)) {
+            result.textContent = "Wracaj tą ścieżką, którąś już znał, do piętnastki tramwaju — znów ruszaj w szał. Lecz tym razem nie kończ podróży zbyt wcześnie, aż Galeria Plaza ujrzy cię wreszcie. Wysiądź, gdy smoka szyny zatrzymają, i do wejścia głównego twe kroki zmierzają. Pięć kroków na zachód zrób śmiało, bez zwłoki, potem dwadzieścia na południe — bez trwogi! Tam skarb kolejny czeka na ciebie, czy pod stopami, czy może na drzewie?";
+            result.style.color = "#008080";
+        } else {
+            result.textContent = "Spróbuj jeszcze raz!";
+            result.style.color = "red";
+        }
+    }
+</script>

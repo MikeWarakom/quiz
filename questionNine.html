@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2 id="question">Co uchodziło za mikrofon na 30stce Michała?</h2>
+        <input type="text" id="answerInput" placeholder="Enter your answer">
+        <button onclick="checkAnswer()">Sprawdź odpowiedź</button>
+        <p id="result"></p>
+    </div>
+<script>
+    function checkAnswer() {
+        const userAnswer = document.getElementById("answerInput").value.trim().toLowerCase();
+        const correctAnswers = ["odkurzacz","rura od odkurzacza","rura","odkurzacz rura","rura odkurzacza","odkurzaczowa rura","rura odkurzacza michała","michał odkurzacz","michał rura odkurzacza","michał rura"];
+        const result = document.getElementById("result");
+
+        if (correctAnswers.includes(userAnswer)) {
+            result.textContent = "Na tym samym przystanku poczekaj chwilę, aż szesnastka nadjedzie cicho i mile. Wsiądź i jedź, aż Plac Bernardyński się zjawi, tam wysiądź spokojnie, gdy tramwaj się stawi. Ulicą Za Bramką podążaj bez zwłoki, pod numerem 12A skieruj swe kroki. Tam czeka zakończenie tej całej drogi — cel osiągnięty, już blisko są skarbu progi.";
+            result.style.color = "#008080";
+        } else {
+            result.textContent = "Spróbuj jeszcze raz!";
+            result.style.color = "red";
+        }
+    }
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2 id="question">Po Euforii dźwieku odprowadziliście dziewczyny na Szpitalnej. Zaczepiła was grupka chłopaków, która niosła paletę browarów. Po co poszliście z nimi do lasu?</h2>
+        <input type="text" id="answerInput" placeholder="Enter your answer">
+        <button onclick="checkAnswer()">Sprawdź odpowiedź</button>
+        <p id="result"></p>
+    </div>
+<script>
+    function checkAnswer() {
+        const userAnswer = document.getElementById("answerInput").value.trim().toLowerCase();
+        const correctAnswers = ["zobaczyć haluny", "zobaczyć haluny w lesie", "haluny", "haluny w lesie", "zobaczyc haluny", "zobaczyc haluny w lesie", "haluny w lesie", "haluny w lesie"];
+        const result = document.getElementById("result");
+
+        if (correctAnswers.includes(userAnswer)) {
+            result.textContent = "Gdy z przystanku zejdziesz — nie trać już chwili, do wejścia głównego od strony drzewiec swe kroki skieruj, mili. Stań w lewym rogu, tuż przy szkle co lśni, gdzie krawędź wejścia cień lekko śni. Patrz wprost na drzwi, co do skarbów prowadzą, lecz wschód to kierunek, gdzie kroki ci wskażą. Dziesięć średnich kroków — nie więcej, nie mniej, a wskazówka kolejna ukaże się twej!";
+            result.style.color = "#008080";
+        } else {
+            result.textContent = "Spróbuj jeszcze raz!";
+            result.style.color = "red";
+        }
+    }
+</script>
