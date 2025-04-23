@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h2 id="question">Kiedyś wracając z imprezy w Poznaniu z Łentkiem dosiadłeś się do randomowego typa. Co się wtedy stało?</h2>
-        <input type="text" id="answerInput" placeholder="Enter your answer">
+        <input type="text" id="answerInput" placeholder="Wpisz odpowiedź">
         <button onclick="checkAnswer()">Sprawdź odpowiedź</button>
         <p id="result"></p>
     </div>
@@ -20,7 +20,7 @@
         const result = document.getElementById("result");
 
         if (correctAnswers.includes(userAnswer)) {
-            result.textContent = "Gdy z pojazdu zejdziesz, nie zwlekaj z marszem, na południe ruszaj – niech krok twój będzie twardszy. Dwieście metrów, nie więcej ni mniej, tam przystanek czeka — więc śmiało, leć! Czeka tam gra, lecz nie taka w karcie, piracka zabawa… lecz niech nie wie, co w starcie!";
+            result.textContent = "Na Bałtyku przystań znajdź bez zwłoki, tam czeka rumak na szynach, wysoki. Piętnastka to numer — zapamiętaj tę wieść, do samej zajezdni nią będziesz chcieć jeść. Nie schodź z pokładu, nim kres się ukaże, tam czeka kolejny trop... w pirackim garażu! Współrzędne na mapie – tam kieruj wzrok swój: ‘X’, ‘Y’, ‘Z’ – tam czeka następny bój!";
             result.style.color = "#008080";
         } else {
             result.textContent = "Spróbuj jeszcze raz!";
