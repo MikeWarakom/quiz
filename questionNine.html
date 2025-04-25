@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h2 id="question">Co uchodziło za mikrofon na 30stce Michała?</h2>
+        <h2 id="question">Na jaki atrybut u Kusiego leciały laski w gimnazjum/liceum?</h2>
         <input type="text" id="answerInput" placeholder="Wpisz odpowiedź">
         <button onclick="checkAnswer()">Sprawdź odpowiedź</button>
         <p id="result"></p>
@@ -16,7 +16,7 @@
 <script>
     function checkAnswer() {
         const userAnswer = document.getElementById("answerInput").value.trim().toLowerCase();
-        const correctAnswers = ["odkurzacz","rura od odkurzacza","rura","odkurzacz rura","rura odkurzacza","odkurzaczowa rura","rura odkurzacza michała","michał odkurzacz","michał rura odkurzacza","michał rura"];
+        const correctAnswers = ["włosy", "długie włosy", "wlosy kusiego", "włosy kusiego", "długie włosy kusiego", "wlosy", "dlugie wlosy", "dlugie wlosy"];
         const result = document.getElementById("result");
 
         if (correctAnswers.includes(userAnswer)) {
