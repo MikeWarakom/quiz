@@ -16,11 +16,11 @@
 <script>
     function checkAnswer() {
         const userAnswer = document.getElementById("answerInput").value.trim().toLowerCase();
-        const correctAnswers = ["zjadłem burgera", "zjadlem burgera", "zjadłem maka", "zjadlem mcdonalda", "zjadłem mcdonaldsa", "zjadlem maka", "zjadłem burgera z maka", "zjadlem burgera z maka", "zjadłem burgera z mcdonaldsa", "zjadlem burgera z mcdonaldsa", "zjadłem mu burgera", "zjadlem mu burgera", "zjadłem mu maka", "zjadlem mu mcdonalda", "zjadłem mu mcdonaldsa", "zjadlem mu maka", "zjadłem mu burgera z maka", "zjadlem mu burgera z maka", "zjadłem mu burgera z mcdonaldsa", "zjadlem mu burgera z mcdonaldsa"];
+        const correctAnswers = ["zjadłem burgera", "zjadlem burgera", "zjadłem maka", "zjadlem mcdonalda", "zjadłem mcdonaldsa", "zjadlem maka", "zjadłem burgera z maka", "zjadlem burgera z maka", "zjadłem burgera z mcdonaldsa", "zjadlem burgera z mcdonaldsa", "zjadłem mu burgera", "zjadlem mu burgera", "zjadłem mu maka", "zjadlem mu mcdonalda", "zjadłem mu mcdonaldsa", "zjadlem mu maka", "zjadłem mu burgera z maka", "zjadlem mu burgera z maka", "zjadłem mu burgera z mcdonaldsa", "zjadlem mu burgera z mcdonaldsa", "zjadlem komus burgera", "zjadłem komuś burgera", "zjadlem komus maka", "zjadłem komuś maka", "zjadlem komus mcdonalda", "zjadłem komuś mcdonalda", "zjadlem komus mcdonaldsa", "zjadłem komuś mcdonaldsa", "zjadlem komus burgera z maka", "zjadłem komuś burgera z maka", "zjadlem komus burgera z mcdonaldsa", "zjadłem komuś burgera z mcdonaldsa"];
         const result = document.getElementById("result");
 
         if (correctAnswers.includes(userAnswer)) {
-            result.textContent = "Na Bałtyku przystań znajdź bez zwłoki, tam czeka rumak na szynach, wysoki. Piętnastka to numer — zapamiętaj tę wieść, do samej zajezdni nią będziesz chcieć jeść. Nie schodź z pokładu, nim kres się ukaże, tam czeka kolejny trop... w ukrytym garażu! Gdy już wysiądziesz, rozejrzyj się śmiało — przy hydrancie szaro-czerwonym coś będzie czekało.";
+            result.textContent = "Na Bałtyku przystań znajdź bez zwłoki, tam czeka rumak na szynach, wysoki. Piętnastka to numer — zapamiętaj tę wieść, do samej zajezdni nią będziesz chcieć jeść. Nie schodź z pokładu, nim kres się ukaże, tam czeka kolejny trop... w ukrytym garażu! Gdy już wysiądziesz, włącz zmysły i rozejrzyj się śmiało — przy hydrancie szaro-czerwonym coś będzie czekało.";
             result.style.color = "#008080";
         } else {
             result.textContent = "Spróbuj jeszcze raz!";

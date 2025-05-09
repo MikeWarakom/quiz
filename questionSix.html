@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h2 id="question">W 2024 roku byłeś dla Cezarego dealerem, a może nawet kurierem! Co mu podrzuciłeś na parkingu?</h2>
+        <h2 id="question">Cofnijmy się do 2015 roku, jesteśmy w twoim studenckim mieszkaniu w Szczecinie.</h2>
         <input type="text" id="answerInput" placeholder="Wpisz odpowiedź">
         <button onclick="checkAnswer()">Sprawdź odpowiedź</button>
         <p id="result"></p>
@@ -16,11 +16,11 @@
 <script>
     function checkAnswer() {
         const userAnswer = document.getElementById("answerInput").value.trim().toLowerCase();
-        const correctAnswers = ["kask narciarski", "kask"];
+        const correctAnswers = ["gdzie państwo idziecie?", "gdzie idziecie?", "gdzie idziecie państwo?", "gdzie państwo idą?", "gdzie idą państwo?", "gdzie idą?","gdzie panstwo idziecie", "gdzie idziecie panstwo?", "gdzie panstwo idą?", "gdzie idą panstwo?", "gdzie idą?", "gdzie idziecie?", "gdzie idziecie?"];
         const result = document.getElementById("result");
 
         if (correctAnswers.includes(userAnswer)) {
-            result.textContent = "Gdy wyjdziesz na światło dzienne, nie trać czujności, bo trop jest blisko, w zasięgu obecności. Spójrz ku południu, tam gdzie trawa z betonem się splata — szukaj tunelu, co barwami świata się oplata. Gdy go odnajdziesz, nie zwlekaj ni chwili — wskazówka tam czeka, gdzie cień i kolor się myli.";
+            result.textContent = "Gdy tramwaj zatrzyma się i drzwi otworzy przed tobą, nie zwlekaj — spójrz ku północnemu wschodowi. Tam, gdzie schody prowadzą i ziemia mięknie pod stopą, szukaj tunelu w błękicie — jakby kawałek nieba spadł między mury a trawę. Przy wejściu, tam gdzie tunel z zielenią się styka, czeka insigni znak, co milczy, lecz wszystko wskazuje.";
             result.style.color = "#008080";
         } else {
             result.textContent = "Spróbuj jeszcze raz!";
